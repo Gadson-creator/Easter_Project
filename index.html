@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eastern Hope Ltd | Quality Steel Products</title>
+    <title>Eastern Hope Ltd | Quality Steel Products & Supply</title>
     <!-- Font & Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
-    <!-- Tailwind via CDN (for quick dev) -->
-    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* custom overrides & utilities */
-        body { font-family: 'Inter', sans-serif; background: #fafcfb; }
-        .bg-steel-50 { background-color: #f2f5f7; }
+        /* ----- custom styles ----- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #f8fafc; color: #162b33; }
+        .bg-steel-50 { background-color: #f2f6f8; }
         .bg-steel-900 { background-color: #0b1a1e; }
         .text-steel-800 { color: #1c2c34; }
         .border-steel-200 { border-color: #d4dfe3; }
@@ -20,27 +19,33 @@
         .shadow-card { box-shadow: 0 8px 24px -6px rgba(0,20,30,0.08); }
         .hover-lift { transition: transform 0.2s ease, box-shadow 0.2s ease; }
         .hover-lift:hover { transform: translateY(-4px); box-shadow: 0 20px 32px -12px rgba(0,20,30,0.18); }
-        .product-image { background: #eef2f4; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #3d5a63; }
+        .product-image-bg { background: #e4ecef; display: flex; align-items: center; justify-content: center; font-size: 3.5rem; color: #2f4d57; }
         .gradient-text { background: linear-gradient(135deg, #0b1a1e 0%, #2c4a54 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .glass-panel { background: rgba(255,255,255,0.7); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.3); }
-        .nav-link { font-weight: 500; color: #1c2c34; padding: 0.5rem 0.75rem; border-radius: 0.5rem; transition: all 0.15s; }
+        .btn-primary { background: #0b1a1e; color: white; padding: 0.6rem 1.8rem; border-radius: 9999px; font-weight: 600; transition: all 0.2s; border: none; cursor: pointer; }
+        .btn-primary:hover { background: #1a343a; transform: scale(1.02); }
+        .btn-outline { border: 1px solid #0b1a1e; color: #0b1a1e; padding: 0.6rem 1.8rem; border-radius: 9999px; font-weight: 600; transition: all 0.2s; background: transparent; cursor: pointer; }
+        .btn-outline:hover { background: #0b1a1e; color: white; }
+        .badge-chip { background: #e5edf0; color: #1c3b44; padding: 0.2rem 0.9rem; border-radius: 999px; font-size: 0.75rem; font-weight: 600; display: inline-block; }
+        .nav-link { font-weight: 500; color: #1c2c34; padding: 0.5rem 0.75rem; border-radius: 0.5rem; transition: all 0.15s; text-decoration: none; }
         .nav-link:hover { background: rgba(11,26,30,0.05); color: #0b1a1e; }
         .nav-link.active { background: #0b1a1e; color: white; }
-        .btn-primary { background: #0b1a1e; color: white; padding: 0.6rem 1.5rem; border-radius: 9999px; font-weight: 600; transition: all 0.2s; }
-        .btn-primary:hover { background: #1a343a; transform: scale(1.02); }
-        .btn-outline { border: 1px solid #0b1a1e; color: #0b1a1e; padding: 0.6rem 1.5rem; border-radius: 9999px; font-weight: 600; transition: all 0.2s; }
-        .btn-outline:hover { background: #0b1a1e; color: white; }
-        .badge-chip { background: #e5edf0; color: #1c3b44; padding: 0.2rem 0.8rem; border-radius: 999px; font-size: 0.75rem; font-weight: 600; }
+        .glass-panel { background: rgba(255,255,255,0.75); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.4); }
         /* scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #eef2f4; }
         ::-webkit-scrollbar-thumb { background: #6b8a94; border-radius: 12px; }
+        /* product image placeholders - real steel photography style */
+        .product-img-placeholder { background: #dce6ea; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #2f4d57; font-weight: 300; }
+        footer a { color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; }
+        footer a:hover { color: white; }
+        .powered-link { color: rgba(255,255,255,0.6); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .powered-link:hover { color: #fbbf24; text-decoration: underline; }
     </style>
 </head>
 <body>
 
-<!-- ====== STICKY NAV ====== -->
-<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200/60">
+<!-- ====== HEADER ====== -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
             <!-- Logo -->
@@ -65,7 +70,7 @@
                 </button>
             </div>
         </div>
-        <!-- mobile menu (hidden) -->
+        <!-- mobile menu -->
         <div id="mobileMenu" class="md:hidden hidden pb-4 border-t border-gray-200/60">
             <div class="flex flex-col space-y-2 pt-3 text-sm">
                 <a href="#" class="nav-link active">Home</a>
@@ -84,7 +89,7 @@
 <main>
     <!-- ====== HERO ====== -->
     <section class="relative bg-steel-50 overflow-hidden">
-        <div class="absolute inset-0 opacity-10" style="background-image: url('https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=1400&q=80'); background-size: cover; background-position: center;"></div>
+        <div class="absolute inset-0 opacity-20" style="background-image: url('https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=1400&q=80'); background-size: cover; background-position: center;"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative z-10">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
@@ -112,7 +117,7 @@
         </div>
     </section>
 
-    <!-- ====== TRUST / INTRO ====== -->
+    <!-- ====== ABOUT / TRUST ====== -->
     <section id="about" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -144,22 +149,21 @@
                 <p class="mt-3 text-gray-500">Engineered for strength, durability and performance.</p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-                <!-- product cards (9 products) -->
+                <!-- 9 product cards with realistic steel imagery -->
                 {[
-                  { name: 'Deformed Bars', desc: 'High-strength reinforcement bars for concrete structures.', spec: 'Ø5 – Ø40', icon: 'fa-bars' },
-                  { name: 'Angles', desc: 'L-shaped structural steel for frames and supports.', spec: '20×20 – 100×100', icon: 'fa-angles-left' },
-                  { name: 'Tee Angles', desc: 'T-shaped sections for heavy-duty framing.', spec: 'T20 – T100', icon: 'fa-shapes' },
-                  { name: 'Hollow Sections', desc: 'Square & rectangular tubes for columns and beams.', spec: '80/40 – 16/16', icon: 'fa-vector-square' },
-                  { name: 'Door Frames', desc: 'Precision steel door frames for commercial buildings.', spec: 'Standard & custom', icon: 'fa-door-open' },
-                  { name: 'Bottle Profiles', desc: 'Specialized profiles for glazing and cladding.', spec: '12×12 – 30×30', icon: 'fa-flask' },
-                  { name: 'Flats', desc: 'Flat steel bars for fabrication and repairs.', spec: '20×3 – 100×10', icon: 'fa-grip-lines' },
-                  { name: 'Omega Profiles', desc: 'Versatile profiles for roofing and siding.', spec: '20 – 40 mm', icon: 'fa-omega' },
-                  { name: 'Triplex', desc: 'High-grade steel for structural applications.', spec: 'Various grades', icon: 'fa-layer-group' },
+                  { name: 'Deformed Bars', desc: 'High-strength reinforcement bars for concrete structures.', spec: 'Ø5 – Ø40', icon: 'fa-bars', img: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=300&h=200&fit=crop' },
+                  { name: 'Angles', desc: 'L-shaped structural steel for frames and supports.', spec: '20×20 – 100×100', icon: 'fa-angles-left', img: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=300&h=200&fit=crop' },
+                  { name: 'Tee Angles', desc: 'T-shaped sections for heavy-duty framing.', spec: 'T20 – T100', icon: 'fa-shapes', img: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=300&h=200&fit=crop' },
+                  { name: 'Hollow Sections', desc: 'Square & rectangular tubes for columns and beams.', spec: '80/40 – 16/16', icon: 'fa-vector-square', img: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=300&h=200&fit=crop' },
+                  { name: 'Door Frames', desc: 'Precision steel door frames for commercial buildings.', spec: 'Standard & custom', icon: 'fa-door-open', img: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=300&h=200&fit=crop' },
+                  { name: 'Bottle Profiles', desc: 'Specialized profiles for glazing and cladding.', spec: '12×12 – 30×30', icon: 'fa-flask', img: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=300&h=200&fit=crop' },
+                  { name: 'Flats', desc: 'Flat steel bars for fabrication and repairs.', spec: '20×3 – 100×10', icon: 'fa-grip-lines', img: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=300&h=200&fit=crop' },
+                  { name: 'Omega Profiles', desc: 'Versatile profiles for roofing and siding.', spec: '20 – 40 mm', icon: 'fa-omega', img: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=300&h=200&fit=crop' },
+                  { name: 'Triplex', desc: 'High-grade steel for structural applications.', spec: 'Various grades', icon: 'fa-layer-group', img: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=300&h=200&fit=crop' },
                 ].map((p, i) => (
                     <div key={i} class="bg-white rounded-2xl shadow-card hover-lift overflow-hidden group">
-                        <div class="product-image h-48 relative">
-                            <i class={`fas ${p.icon} text-5xl text-steel-800/20 group-hover:scale-110 transition duration-300`}></i>
-                            <span class="absolute bottom-2 right-2 text-xs bg-white/70 px-2 py-0.5 rounded-full text-steel-800 font-medium">Steel</span>
+                        <div class="h-48 overflow-hidden product-img-placeholder">
+                            <img src={p.img} alt={p.name} class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy" />
                         </div>
                         <div class="p-5">
                             <h3 class="font-bold text-lg text-steel-800">{p.name}</h3>
@@ -176,7 +180,7 @@
         </div>
     </section>
 
-    <!-- ====== AI ASSISTANT (DEMO) ====== -->
+    <!-- ====== AI ASSISTANT ====== -->
     <section id="ai" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row gap-12 items-center">
@@ -194,7 +198,7 @@
                     </div>
                 </div>
                 <div class="flex-1 bg-steel-900/5 p-6 rounded-2xl border border-steel-200/50">
-                    <div class="flex items-center gap-3"><i class="fas fa-comment-dots text-amber-500"></i><span class="font-semibold text-steel-800">AI Demo</span><span class="badge-chip">ready</span></div>
+                    <div class="flex items-center gap-3"><i class="fas fa-comment-dots text-amber-500"></i><span class="font-semibold text-steel-800">AI Assistant</span><span class="badge-chip">active</span></div>
                     <div class="mt-3 p-4 bg-white rounded-xl shadow-inner text-sm text-gray-600">
                         <p><span class="font-bold text-steel-800">You:</span> I need steel for a warehouse project in Kigali.</p>
                         <p class="mt-2"><span class="font-bold text-amber-700">AI:</span> Recommended products: Hollow Sections, Angles, Deformed Bars. Please confirm dimensions, quantity and delivery location.</p>
@@ -208,7 +212,7 @@
         </div>
     </section>
 
-    <!-- ====== REQUEST QUOTE (SIMPLIFIED) ====== -->
+    <!-- ====== REQUEST QUOTE ====== -->
     <section id="quote" class="py-20 bg-steel-50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
@@ -225,7 +229,7 @@
                     <div class="md:col-span-2"><label class="block text-sm font-medium text-steel-800">Delivery Location</label><input type="text" class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2.5" placeholder="Kigali, Rwanda" /></div>
                     <div class="md:col-span-2"><label class="block text-sm font-medium text-steel-800">Project Information / Notes</label><textarea rows="3" class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2.5" placeholder="Tell us about your project..."></textarea></div>
                     <div class="md:col-span-2">
-                        <button class="w-full btn-primary py-3 text-lg">Submit Quote Request <i class="fas fa-arrow-right ml-2"></i></button>
+                        <button type="submit" class="w-full btn-primary py-3 text-lg">Submit Quote Request <i class="fas fa-arrow-right ml-2"></i></button>
                         <p class="text-center text-xs text-gray-400 mt-2">An Eastern Hope representative will review your request.</p>
                     </div>
                 </form>
@@ -233,24 +237,53 @@
         </div>
     </section>
 
-    <!-- ====== MORE THAN A WEBSITE ====== -->
+    <!-- ====== SOLUTIONS / MORE THAN A WEBSITE ====== -->
     <section id="solutions" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto">
-                <span class="text-sm font-semibold text-amber-600 uppercase tracking-wider">Digital Transformation</span>
+                <span class="text-sm font-semibold text-amber-600 uppercase tracking-wider">Digital Business Platform</span>
                 <h2 class="text-3xl md:text-4xl font-bold mt-2 text-steel-800">More Than a Website</h2>
-                <p class="mt-3 text-gray-500">A complete business-management demonstration platform for Eastern Hope.</p>
+                <p class="mt-3 text-gray-500">A complete business-management platform for Eastern Hope.</p>
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
                 {['Customer Portal','AI Sales Assistant','Digital Quote Requests','Inventory Management','Business Dashboard','Customer Management'].map((item, i) => (
                     <div key={i} class="bg-steel-50 p-6 rounded-2xl border border-steel-200/40 hover:shadow-premium transition">
                         <div class="w-12 h-12 bg-steel-900/10 rounded-xl flex items-center justify-center"><i class="fas fa-cog text-steel-800 text-xl"></i></div>
                         <h4 class="font-bold text-steel-800 mt-4">{item}</h4>
-                        <p class="text-sm text-gray-500 mt-1">Demonstration capability ready for integration.</p>
+                        <p class="text-sm text-gray-500 mt-1">Enterprise capability ready for integration.</p>
                     </div>
                 ))}
             </div>
-            <div class="mt-10 text-center"><span class="inline-block bg-amber-100 text-amber-800 px-4 py-1.5 rounded-full text-sm font-medium"><i class="fas fa-play-circle mr-2"></i>Demo Mode — click to explore</span></div>
+        </div>
+    </section>
+
+    <!-- ====== CONTACT ====== -->
+    <section id="contact" class="py-20 bg-steel-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <span class="text-sm font-semibold text-amber-600 uppercase tracking-wider">Contact</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 text-steel-800">Get in Touch</h2>
+            </div>
+            <div class="mt-10 grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-2xl shadow-card">
+                    <h4 class="font-bold text-steel-800">Contact Information</h4>
+                    <div class="mt-4 space-y-3 text-sm">
+                        <p><i class="fas fa-map-marker-alt w-5 text-amber-600"></i> Next to Hashi Energy, Kinamba - KN 8 Ave, Kigali</p>
+                        <p><i class="fas fa-phone w-5 text-amber-600"></i> <a href="tel:+250788301351" class="text-steel-800 hover:underline">+250 788 301 351</a></p>
+                        <p><i class="fas fa-envelope w-5 text-amber-600"></i> <a href="mailto:info@easternhopeltd.com" class="text-steel-800 hover:underline">info@easternhopeltd.com</a></p>
+                        <p><i class="fas fa-clock w-5 text-amber-600"></i> Mon – Fri: 8:00 AM – 5:00 PM</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-card">
+                    <h4 class="font-bold text-steel-800">Send a Message</h4>
+                    <form class="mt-4 space-y-3">
+                        <input type="text" placeholder="Your Name" class="w-full border border-gray-300 rounded-xl px-4 py-2.5 text-sm" />
+                        <input type="email" placeholder="Email" class="w-full border border-gray-300 rounded-xl px-4 py-2.5 text-sm" />
+                        <textarea rows="3" placeholder="Message" class="w-full border border-gray-300 rounded-xl px-4 py-2.5 text-sm"></textarea>
+                        <button class="btn-primary w-full text-sm">Send Message</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 </main>
@@ -262,9 +295,12 @@
             <div><h4 class="font-bold text-white">Eastern Hope Ltd</h4><p class="text-sm mt-2 text-white/60">Quality steel, reliable supply, professional service.</p></div>
             <div><h5 class="font-semibold text-white">Products</h5><ul class="mt-2 space-y-1 text-sm text-white/60"><li>Deformed Bars</li><li>Angles</li><li>Hollow Sections</li><li>Door Frames</li></ul></div>
             <div><h5 class="font-semibold text-white">Company</h5><ul class="mt-2 space-y-1 text-sm text-white/60"><li><a href="#about">About</a></li><li><a href="#products">Products</a></li><li><a href="#quote">Request Quote</a></li><li><a href="#contact">Contact</a></li></ul></div>
-            <div><h5 class="font-semibold text-white">Contact</h5><p class="text-sm mt-2 text-white/60"><i class="fas fa-map-marker-alt mr-2"></i>Next to Hashi Energy, Kinamba - KN 8 Ave, Kigali</p><p class="text-sm text-white/60"><i class="fas fa-phone mr-2"></i>+250 788 301 351</p><p class="text-sm text-white/60"><i class="fas fa-envelope mr-2"></i>info@easternhopeltd.com</p></div>
+            <div><h5 class="font-semibold text-white">Contact</h5><p class="text-sm mt-2 text-white/60"><i class="fas fa-map-marker-alt mr-2"></i>Kinamba - KN 8 Ave, Kigali</p><p class="text-sm text-white/60"><i class="fas fa-phone mr-2"></i>+250 788 301 351</p><p class="text-sm text-white/60"><i class="fas fa-envelope mr-2"></i>info@easternhopeltd.com</p></div>
         </div>
-        <div class="border-t border-white/10 mt-10 pt-6 text-sm text-white/40 flex justify-between"><span>&copy; 2024 Eastern Hope Ltd. All rights reserved.</span><span>Demo prototype — for presentation</span></div>
+        <div class="border-t border-white/10 mt-10 pt-6 text-sm text-white/40 flex flex-col sm:flex-row justify-between items-center gap-2">
+            <span>&copy; 2026 Eastern Hope Ltd. All rights reserved.</span>
+            <span>Powered by <a href="https://neroxiafrica.com" target="_blank" class="powered-link">NEROXIAFRICA</a></span>
+        </div>
     </div>
 </footer>
 
@@ -279,18 +315,15 @@
         if (btn && menu) {
             btn.addEventListener('click', function() { menu.classList.toggle('hidden'); });
         }
-        // close on link click (mobile)
         document.querySelectorAll('#mobileMenu a').forEach(link => {
             link.addEventListener('click', function() { menu.classList.add('hidden'); });
         });
-    });
-</script>
-<!-- simple scroll behavior -->
-<script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        // smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+            });
         });
     });
 </script>
