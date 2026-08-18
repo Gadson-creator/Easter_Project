@@ -3,329 +3,616 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eastern Hope Ltd | Quality Steel Products & Supply</title>
-    <!-- Font & Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+    <title>Eastern Hope Ltd | Steel Products & Construction Materials Rwanda</title>
+    <meta name="description" content="Eastern Hope Ltd is a leading importer and distributor of steel products in Rwanda. Quality deformed bars, angles, hollow sections, door frames and more." />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏗️</text></svg>" />
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
     <style>
-        /* ----- custom styles ----- */
+        /* ===== RESET & BASE ===== */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: #f8fafc; color: #162b33; }
-        .bg-steel-50 { background-color: #f2f6f8; }
-        .bg-steel-900 { background-color: #0b1a1e; }
-        .text-steel-800 { color: #1c2c34; }
-        .border-steel-200 { border-color: #d4dfe3; }
-        .shadow-premium { box-shadow: 0 20px 40px -12px rgba(0,20,30,0.15); }
-        .shadow-card { box-shadow: 0 8px 24px -6px rgba(0,20,30,0.08); }
-        .hover-lift { transition: transform 0.2s ease, box-shadow 0.2s ease; }
-        .hover-lift:hover { transform: translateY(-4px); box-shadow: 0 20px 32px -12px rgba(0,20,30,0.18); }
-        .product-image-bg { background: #e4ecef; display: flex; align-items: center; justify-content: center; font-size: 3.5rem; color: #2f4d57; }
-        .gradient-text { background: linear-gradient(135deg, #0b1a1e 0%, #2c4a54 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .btn-primary { background: #0b1a1e; color: white; padding: 0.6rem 1.8rem; border-radius: 9999px; font-weight: 600; transition: all 0.2s; border: none; cursor: pointer; }
-        .btn-primary:hover { background: #1a343a; transform: scale(1.02); }
-        .btn-outline { border: 1px solid #0b1a1e; color: #0b1a1e; padding: 0.6rem 1.8rem; border-radius: 9999px; font-weight: 600; transition: all 0.2s; background: transparent; cursor: pointer; }
-        .btn-outline:hover { background: #0b1a1e; color: white; }
-        .badge-chip { background: #e5edf0; color: #1c3b44; padding: 0.2rem 0.9rem; border-radius: 999px; font-size: 0.75rem; font-weight: 600; display: inline-block; }
-        .nav-link { font-weight: 500; color: #1c2c34; padding: 0.5rem 0.75rem; border-radius: 0.5rem; transition: all 0.15s; text-decoration: none; }
-        .nav-link:hover { background: rgba(11,26,30,0.05); color: #0b1a1e; }
-        .nav-link.active { background: #0b1a1e; color: white; }
-        .glass-panel { background: rgba(255,255,255,0.75); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.4); }
-        /* scrollbar */
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #eef2f4; }
-        ::-webkit-scrollbar-thumb { background: #6b8a94; border-radius: 12px; }
-        /* product image placeholders - real steel photography style */
-        .product-img-placeholder { background: #dce6ea; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #2f4d57; font-weight: 300; }
-        footer a { color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; }
-        footer a:hover { color: white; }
-        .powered-link { color: rgba(255,255,255,0.6); text-decoration: none; font-weight: 500; transition: color 0.2s; }
-        .powered-link:hover { color: #fbbf24; text-decoration: underline; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background: #f8fafc; color: #14272e; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+        /* ===== COLORS ===== */
+        :root {
+            --steel-900: #0a171c;
+            --steel-800: #14272e;
+            --steel-700: #1f3d47;
+            --steel-100: #eef3f5;
+            --gold: #c68a3c;
+            --gold-light: #e8c78a;
+        }
+        .bg-steel { background: var(--steel-900); }
+        .bg-steel-light { background: var(--steel-100); }
+        .text-steel { color: var(--steel-800); }
+        .text-gold { color: var(--gold); }
+        .border-gold { border-color: var(--gold); }
+        /* ===== BUTTONS ===== */
+        .btn-primary { background: var(--steel-900); color: white; padding: 0.75rem 2rem; border-radius: 50px; font-weight: 600; border: none; cursor: pointer; transition: all 0.25s; display: inline-block; }
+        .btn-primary:hover { background: var(--steel-700); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(10,23,28,0.2); }
+        .btn-gold { background: var(--gold); color: white; padding: 0.75rem 2rem; border-radius: 50px; font-weight: 600; border: none; cursor: pointer; transition: all 0.25s; display: inline-block; }
+        .btn-gold:hover { background: #b0742f; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(198,138,60,0.3); }
+        .btn-outline { background: transparent; border: 2px solid var(--steel-900); color: var(--steel-900); padding: 0.7rem 2rem; border-radius: 50px; font-weight: 600; cursor: pointer; transition: all 0.25s; display: inline-block; }
+        .btn-outline:hover { background: var(--steel-900); color: white; }
+        /* ===== HEADER ===== */
+        header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+        .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.3rem; color: var(--steel-800); }
+        .logo-icon { background: var(--steel-900); color: white; width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; }
+        .nav-links { display: flex; gap: 0.25rem; list-style: none; align-items: center; }
+        .nav-links a { padding: 0.5rem 0.9rem; border-radius: 8px; font-weight: 500; font-size: 0.9rem; transition: all 0.15s; color: var(--steel-800); }
+        .nav-links a:hover { background: rgba(10,23,28,0.06); }
+        .nav-links a.active { background: var(--steel-900); color: white; }
+        .nav-cta { margin-left: 0.5rem; }
+        .hamburger { display: none; font-size: 1.6rem; cursor: pointer; color: var(--steel-800); }
+        /* ===== HERO ===== */
+        .hero { position: relative; min-height: 90vh; display: flex; align-items: center; background: var(--steel-100); overflow: hidden; }
+        .hero-bg { position: absolute; inset: 0; opacity: 0.2; background-image: url('https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=1600&q=80'); background-size: cover; background-position: center; }
+        .hero-content { position: relative; z-index: 2; padding: 4rem 0; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .hero h1 { font-size: clamp(2.8rem, 6vw, 4.8rem); font-weight: 900; line-height: 1.1; color: var(--steel-800); }
+        .hero h1 span { background: linear-gradient(135deg, var(--steel-900), var(--steel-700)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.2rem; color: #3d535c; max-width: 500px; margin-top: 1rem; }
+        .hero-buttons { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+        .hero-card { background: rgba(255,255,255,0.85); backdrop-filter: blur(12px); padding: 1.8rem; border-radius: 20px; box-shadow: 0 20px 40px -12px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.3); max-width: 360px; }
+        .hero-card .label { font-weight: 600; color: var(--steel-800); display: flex; align-items: center; gap: 0.5rem; }
+        .hero-card .label i { color: var(--gold); }
+        .hero-card .row { display: flex; justify-content: space-between; padding: 0.4rem 0; border-bottom: 1px solid rgba(0,0,0,0.04); }
+        .hero-card .row:last-child { border-bottom: none; }
+        /* ===== SECTION TITLES ===== */
+        .section-title { text-align: center; max-width: 700px; margin: 0 auto 3rem; }
+        .section-title h2 { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; color: var(--steel-800); }
+        .section-title p { color: #5a727d; margin-top: 0.5rem; }
+        .section-title .overline { color: var(--gold); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem; }
+        /* ===== PRODUCTS ===== */
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; }
+        .product-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.04); transition: all 0.3s; border: 1px solid rgba(0,0,0,0.03); }
+        .product-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px -12px rgba(0,0,0,0.12); }
+        .product-card .img-wrap { height: 220px; overflow: hidden; background: var(--steel-100); }
+        .product-card .img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+        .product-card:hover .img-wrap img { transform: scale(1.04); }
+        .product-card .body { padding: 1.5rem; }
+        .product-card .body h3 { font-size: 1.1rem; font-weight: 700; color: var(--steel-800); }
+        .product-card .body p { color: #5a727d; font-size: 0.9rem; margin-top: 0.25rem; }
+        .product-card .body .spec { display: inline-block; background: var(--steel-100); padding: 0.15rem 0.8rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; color: var(--steel-700); margin-top: 0.6rem; }
+        .product-card .body .actions { display: flex; justify-content: space-between; align-items: center; margin-top: 1.2rem; }
+        .product-card .body .actions a { font-weight: 600; font-size: 0.85rem; }
+        /* ===== MODAL ===== */
+        .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); backdrop-filter: blur(6px); z-index: 200; display: none; align-items: center; justify-content: center; padding: 1.5rem; }
+        .modal-overlay.open { display: flex; }
+        .modal { background: white; border-radius: 24px; max-width: 720px; width: 100%; max-height: 90vh; overflow-y: auto; padding: 2rem; position: relative; animation: modalIn 0.25s ease; }
+        @keyframes modalIn { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: scale(1); } }
+        .modal-close { position: absolute; top: 1rem; right: 1.5rem; font-size: 1.8rem; cursor: pointer; color: #8a9ea8; transition: color 0.2s; }
+        .modal-close:hover { color: var(--steel-800); }
+        .modal img { width: 100%; max-height: 300px; object-fit: cover; border-radius: 16px; margin-bottom: 1.5rem; }
+        .modal h2 { font-size: 1.8rem; font-weight: 800; color: var(--steel-800); }
+        .modal .specs { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0; }
+        .modal .specs span { background: var(--steel-100); padding: 0.3rem 1rem; border-radius: 30px; font-size: 0.8rem; font-weight: 600; color: var(--steel-700); }
+        .modal .form-group { margin-top: 1.2rem; }
+        .modal .form-group label { display: block; font-weight: 600; font-size: 0.9rem; color: var(--steel-800); margin-bottom: 0.2rem; }
+        .modal .form-group input, .modal .form-group select, .modal .form-group textarea { width: 100%; padding: 0.6rem 1rem; border: 1px solid #dce4e8; border-radius: 12px; font-size: 0.95rem; transition: border 0.2s; }
+        .modal .form-group input:focus, .modal .form-group select:focus, .modal .form-group textarea:focus { outline: none; border-color: var(--gold); }
+        .modal .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        /* ===== AI CHAT ===== */
+        .ai-float { position: fixed; bottom: 100px; right: 24px; z-index: 90; }
+        .ai-toggle { width: 60px; height: 60px; border-radius: 50%; background: var(--steel-900); color: white; border: none; font-size: 1.8rem; cursor: pointer; box-shadow: 0 8px 30px rgba(10,23,28,0.25); transition: transform 0.2s; display: flex; align-items: center; justify-content: center; }
+        .ai-toggle:hover { transform: scale(1.06); }
+        .ai-window { position: fixed; bottom: 180px; right: 24px; width: 380px; max-width: calc(100vw - 2rem); background: white; border-radius: 24px; box-shadow: 0 20px 60px rgba(0,0,0,0.2); display: none; flex-direction: column; max-height: 500px; overflow: hidden; border: 1px solid rgba(0,0,0,0.05); z-index: 95; }
+        .ai-window.open { display: flex; }
+        .ai-header { background: var(--steel-900); color: white; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; }
+        .ai-header h4 { font-weight: 600; font-size: 1rem; }
+        .ai-header .close-ai { background: none; border: none; color: rgba(255,255,255,0.6); font-size: 1.4rem; cursor: pointer; }
+        .ai-messages { flex: 1; padding: 1rem 1.5rem; overflow-y: auto; background: #f8fafc; }
+        .ai-msg { margin-bottom: 0.8rem; display: flex; flex-direction: column; }
+        .ai-msg.bot { align-items: flex-start; }
+        .ai-msg.user { align-items: flex-end; }
+        .ai-msg .bubble { max-width: 85%; padding: 0.7rem 1rem; border-radius: 16px; font-size: 0.9rem; line-height: 1.5; }
+        .ai-msg.bot .bubble { background: white; border: 1px solid #e4ebef; }
+        .ai-msg.user .bubble { background: var(--steel-900); color: white; }
+        .ai-input { display: flex; gap: 0.5rem; padding: 0.8rem 1rem; border-top: 1px solid #e4ebef; background: white; }
+        .ai-input input { flex: 1; border: none; padding: 0.5rem 0; font-size: 0.95rem; outline: none; }
+        .ai-input button { background: var(--steel-900); color: white; border: none; padding: 0.5rem 1.2rem; border-radius: 30px; font-weight: 600; cursor: pointer; }
+        /* ===== QUOTE BUILDER ===== */
+        .quote-builder { background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.04); margin-top: 2rem; }
+        .quote-builder .items { margin: 1.5rem 0; }
+        .quote-item { display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0; border-bottom: 1px solid #eef3f5; }
+        .quote-item .remove { color: #b91c1c; cursor: pointer; font-weight: 600; }
+        /* ===== FOOTER ===== */
+        footer { background: var(--steel-900); color: rgba(255,255,255,0.8); padding: 4rem 0 2rem; margin-top: 4rem; }
+        footer .grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; }
+        footer h4 { color: white; font-weight: 700; margin-bottom: 1rem; }
+        footer ul { list-style: none; }
+        footer ul li { margin-bottom: 0.5rem; }
+        footer ul a { color: rgba(255,255,255,0.6); transition: color 0.2s; }
+        footer ul a:hover { color: white; }
+        footer .bottom { border-top: 1px solid rgba(255,255,255,0.06); margin-top: 2.5rem; padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem; color: rgba(255,255,255,0.4); }
+        footer .bottom a { color: rgba(255,255,255,0.5); transition: color 0.2s; }
+        footer .bottom a:hover { color: var(--gold); }
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) { .hero-content { grid-template-columns: 1fr; gap: 2rem; } .hero-card { max-width: 100%; } }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: block; }
+            .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0; background: white; padding: 1rem 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.05); gap: 0.25rem; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+            .nav-links.open a { padding: 0.6rem 0; }
+            .nav-cta { display: none; }
+            footer .grid { grid-template-columns: 1fr 1fr; }
+            .modal .form-row { grid-template-columns: 1fr; }
+            .ai-window { width: calc(100vw - 2rem); right: 1rem; bottom: 160px; }
+        }
+        @media (max-width: 480px) { footer .grid { grid-template-columns: 1fr; } .hero h1 { font-size: 2.4rem; } }
+        /* utilities */
+        .mt-4 { margin-top: 2rem; }
+        .mb-4 { margin-bottom: 2rem; }
+        .py-20 { padding: 5rem 0; }
+        .py-12 { padding: 3rem 0; }
+        .bg-white { background: white; }
+        .text-center { text-align: center; }
+        .gap-2 { gap: 0.5rem; }
+        .flex { display: flex; }
+        .flex-wrap { flex-wrap: wrap; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        /* Back to top */
+        .back-top { position: fixed; bottom: 24px; left: 24px; background: var(--steel-900); color: white; width: 44px; height: 44px; border-radius: 50%; border: none; font-size: 1.2rem; cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.15); opacity: 0; transition: opacity 0.3s; z-index: 50; }
+        .back-top.visible { opacity: 1; }
     </style>
 </head>
 <body>
 
-<!-- ====== HEADER ====== -->
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200/60">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16">
-            <!-- Logo -->
-            <div class="flex items-center gap-2">
-                <div class="w-9 h-9 bg-steel-900 rounded-lg flex items-center justify-center text-white font-bold text-sm">EH</div>
-                <span class="font-bold text-xl text-steel-800 tracking-tight">Eastern Hope</span>
-            </div>
-            <!-- Desktop nav -->
-            <nav class="hidden md:flex items-center gap-1 text-sm">
-                <a href="#" class="nav-link active">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#products" class="nav-link">Products</a>
-                <a href="#solutions" class="nav-link">Solutions</a>
-                <a href="#ai" class="nav-link">AI Assistant</a>
-                <a href="#quote" class="nav-link">Request Quote</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </nav>
-            <div class="flex items-center gap-3">
-                <a href="#quote" class="hidden md:inline-block btn-primary text-sm">Request Quote</a>
-                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100">
-                    <i class="fas fa-bars text-xl text-steel-800"></i>
-                </button>
-            </div>
+<!-- ===== HEADER ===== -->
+<header>
+    <div class="container header-inner">
+        <div class="logo">
+            <div class="logo-icon">EH</div>
+            <span>Eastern Hope</span>
         </div>
-        <!-- mobile menu -->
-        <div id="mobileMenu" class="md:hidden hidden pb-4 border-t border-gray-200/60">
-            <div class="flex flex-col space-y-2 pt-3 text-sm">
-                <a href="#" class="nav-link active">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#products" class="nav-link">Products</a>
-                <a href="#solutions" class="nav-link">Solutions</a>
-                <a href="#ai" class="nav-link">AI Assistant</a>
-                <a href="#quote" class="nav-link">Request Quote</a>
-                <a href="#contact" class="nav-link">Contact</a>
-                <a href="#quote" class="btn-primary text-center mt-2">Request Quote</a>
-            </div>
-        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#industries">Industries</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#quote">Request Quote</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="nav-cta"><a href="#quote" class="btn-primary" style="padding:0.5rem 1.5rem;font-size:0.85rem;">Get a Quote</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">☰</div>
     </div>
 </header>
 
-<main>
-    <!-- ====== HERO ====== -->
-    <section class="relative bg-steel-50 overflow-hidden">
-        <div class="absolute inset-0 opacity-20" style="background-image: url('https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=1400&q=80'); background-size: cover; background-position: center;"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative z-10">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-steel-800">
-                        STRONGER MATERIALS. <br class="hidden sm:block" />
-                        <span class="gradient-text">STRONGER FUTURES.</span>
-                    </h1>
-                    <p class="mt-4 text-lg text-gray-600 max-w-lg">Reliable steel solutions for construction, manufacturing and infrastructure.</p>
-                    <div class="mt-8 flex flex-wrap gap-4">
-                        <a href="#quote" class="btn-primary">Request a Quote</a>
-                        <a href="#products" class="btn-outline">Explore Products</a>
-                        <a href="#contact" class="text-steel-800 underline underline-offset-4 font-medium">Talk to Eastern Hope</a>
-                    </div>
-                </div>
-                <!-- floating card -->
-                <div class="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-premium border border-white/50 max-w-sm ml-auto">
-                    <div class="flex items-center gap-2 text-sm font-semibold text-steel-800"><i class="fas fa-cube text-amber-600"></i> Need steel for your next project?</div>
-                    <div class="mt-3 space-y-2">
-                        <div class="flex justify-between"><span class="text-gray-500">Product</span><span class="font-medium">Deformed Bars</span></div>
-                        <div class="flex justify-between"><span class="text-gray-500">Quantity</span><span class="font-medium">5,000 KG</span></div>
-                    </div>
-                    <a href="#quote" class="mt-4 block w-full text-center bg-amber-600 hover:bg-amber-700 text-white font-semibold py-2.5 rounded-xl transition">Request Quote</a>
-                </div>
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+        <div>
+            <h1>BUILD STRONG.<br /><span>BUILD WITH EASTERN HOPE.</span></h1>
+            <p>Quality steel products. Reliable supply. Professional service.</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn-primary">Explore Products</a>
+                <a href="#quote" class="btn-gold">Request a Quote</a>
+                <a href="#" class="btn-outline" onclick="openAI();return false;">Talk to AI <i class="fas fa-robot"></i></a>
             </div>
         </div>
-    </section>
+        <div class="hero-card">
+            <div class="label"><i class="fas fa-cube"></i> Need steel for your next project?</div>
+            <div class="row"><span>Product</span><strong>Deformed Bars</strong></div>
+            <div class="row"><span>Quantity</span><strong>5,000 KG</strong></div>
+            <a href="#quote" class="btn-gold" style="width:100%;text-align:center;margin-top:0.8rem;">Request Quote</a>
+        </div>
+    </div>
+</section>
 
-    <!-- ====== ABOUT / TRUST ====== -->
-    <section id="about" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <span class="text-sm font-semibold text-amber-600 uppercase tracking-wider">About Eastern Hope</span>
-                    <h2 class="text-3xl md:text-4xl font-bold mt-2 text-steel-800">Quality steel. Reliable supply. Professional service.</h2>
-                    <p class="mt-4 text-gray-600 leading-relaxed">Eastern Hope Ltd is a leading importer and distributor of steel products in Rwanda. We source premium steel construction materials from regional and international suppliers, wholesaling to retailers and construction companies at competitive prices.</p>
-                    <p class="mt-3 text-gray-600 leading-relaxed">Beyond steel, we’ve expanded into essential commodities like rice and sugar, serving the wider East African market with the same dedication to excellence.</p>
-                    <div class="mt-6 grid grid-cols-2 gap-4">
-                        <div><span class="block font-bold text-steel-800">Quality Focus</span><span class="text-sm text-gray-500">ISO-compliant materials</span></div>
-                        <div><span class="block font-bold text-steel-800">Reliable Supply</span><span class="text-sm text-gray-500">Regional & global sourcing</span></div>
-                        <div><span class="block font-bold text-steel-800">Customer Service</span><span class="text-sm text-gray-500">Dedicated support</span></div>
-                        <div><span class="block font-bold text-steel-800">Steel Distribution</span><span class="text-sm text-gray-500">Wholesale & retail</span></div>
-                    </div>
+<!-- ===== ABOUT ===== -->
+<section class="py-20 bg-white" id="about">
+    <div class="container">
+        <div class="section-title">
+            <span class="overline">About Eastern Hope</span>
+            <h2>Steel You Can Build On</h2>
+            <p>Leading importer and distributor of steel products in Rwanda.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;">
+            <div>
+                <p style="font-size:1.05rem;color:#2c4855;">Eastern Hope Ltd sources premium steel construction materials from regional and international suppliers, wholesaling to retailers and construction companies at competitive prices. Beyond steel, we’ve expanded into essential commodities like rice and sugar, serving the wider East African market.</p>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem;">
+                    <div><strong style="color:var(--steel-800);">Quality Focus</strong><br /><span style="font-size:0.9rem;color:#5a727d;">ISO-compliant materials</span></div>
+                    <div><strong style="color:var(--steel-800);">Reliable Supply</strong><br /><span style="font-size:0.9rem;color:#5a727d;">Regional &amp; global sourcing</span></div>
+                    <div><strong style="color:var(--steel-800);">Customer Service</strong><br /><span style="font-size:0.9rem;color:#5a727d;">Dedicated support team</span></div>
+                    <div><strong style="color:var(--steel-800);">Steel Distribution</strong><br /><span style="font-size:0.9rem;color:#5a727d;">Wholesale &amp; retail</span></div>
                 </div>
-                <div class="rounded-2xl overflow-hidden shadow-premium">
-                    <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=800&h=600&fit=crop" alt="Steel warehouse" class="w-full h-72 object-cover" />
-                </div>
+            </div>
+            <div style="border-radius:20px;overflow:hidden;box-shadow:0 20px 40px -12px rgba(0,0,0,0.1);">
+                <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=800&h=500&fit=crop" alt="Steel warehouse" loading="lazy" style="width:100%;height:300px;object-fit:cover;" />
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ====== PRODUCT SHOWCASE ====== -->
-    <section id="products" class="py-20 bg-steel-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto">
-                <span class="text-sm font-semibold text-amber-600 uppercase tracking-wider">Our Range</span>
-                <h2 class="text-3xl md:text-4xl font-bold mt-2 text-steel-800">Premium Steel Products</h2>
-                <p class="mt-3 text-gray-500">Engineered for strength, durability and performance.</p>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-                <!-- 9 product cards with realistic steel imagery -->
-                {[
-                  { name: 'Deformed Bars', desc: 'High-strength reinforcement bars for concrete structures.', spec: 'Ø5 – Ø40', icon: 'fa-bars', img: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=300&h=200&fit=crop' },
-                  { name: 'Angles', desc: 'L-shaped structural steel for frames and supports.', spec: '20×20 – 100×100', icon: 'fa-angles-left', img: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=300&h=200&fit=crop' },
-                  { name: 'Tee Angles', desc: 'T-shaped sections for heavy-duty framing.', spec: 'T20 – T100', icon: 'fa-shapes', img: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=300&h=200&fit=crop' },
-                  { name: 'Hollow Sections', desc: 'Square & rectangular tubes for columns and beams.', spec: '80/40 – 16/16', icon: 'fa-vector-square', img: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=300&h=200&fit=crop' },
-                  { name: 'Door Frames', desc: 'Precision steel door frames for commercial buildings.', spec: 'Standard & custom', icon: 'fa-door-open', img: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=300&h=200&fit=crop' },
-                  { name: 'Bottle Profiles', desc: 'Specialized profiles for glazing and cladding.', spec: '12×12 – 30×30', icon: 'fa-flask', img: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=300&h=200&fit=crop' },
-                  { name: 'Flats', desc: 'Flat steel bars for fabrication and repairs.', spec: '20×3 – 100×10', icon: 'fa-grip-lines', img: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=300&h=200&fit=crop' },
-                  { name: 'Omega Profiles', desc: 'Versatile profiles for roofing and siding.', spec: '20 – 40 mm', icon: 'fa-omega', img: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=300&h=200&fit=crop' },
-                  { name: 'Triplex', desc: 'High-grade steel for structural applications.', spec: 'Various grades', icon: 'fa-layer-group', img: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=300&h=200&fit=crop' },
-                ].map((p, i) => (
-                    <div key={i} class="bg-white rounded-2xl shadow-card hover-lift overflow-hidden group">
-                        <div class="h-48 overflow-hidden product-img-placeholder">
-                            <img src={p.img} alt={p.name} class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy" />
-                        </div>
-                        <div class="p-5">
-                            <h3 class="font-bold text-lg text-steel-800">{p.name}</h3>
-                            <p class="text-sm text-gray-500 mt-1">{p.desc}</p>
-                            <div class="mt-2 flex flex-wrap gap-1"><span class="badge-chip">{p.spec}</span></div>
-                            <div class="mt-4 flex justify-between items-center">
-                                <a href="#" class="text-sm font-medium text-amber-700 hover:underline">View Details</a>
-                                <a href="#quote" class="text-sm font-semibold bg-steel-900 text-white px-4 py-1.5 rounded-full hover:bg-steel-700 transition">Request Quote</a>
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </div>
+<!-- ===== PRODUCTS ===== -->
+<section class="py-20 bg-steel-light" id="products">
+    <div class="container">
+        <div class="section-title">
+            <span class="overline">Our Range</span>
+            <h2>Premium Steel Products</h2>
+            <p>Engineered for strength, durability and performance.</p>
         </div>
-    </section>
+        <div class="product-grid" id="productGrid"></div>
+    </div>
+</section>
 
-    <!-- ====== AI ASSISTANT ====== -->
-    <section id="ai" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row gap-12 items-center">
-                <div class="flex-1">
-                    <span class="text-sm font-semibold text-amber-600 uppercase tracking-wider">AI-Powered</span>
-                    <h2 class="text-3xl md:text-4xl font-bold mt-2 text-steel-800">Eastern Hope AI Assistant</h2>
-                    <p class="mt-3 text-gray-500 max-w-lg">Get instant product recommendations, quotation help, and project advice.</p>
-                    <div class="mt-6 space-y-3">
-                        <div class="flex items-start gap-3 p-3 bg-steel-50 rounded-xl"><i class="fas fa-robot text-steel-800 mt-1"></i><div><p class="text-sm font-medium">"Which steel product is suitable for my construction project?"</p><span class="text-xs text-gray-400">AI recommends based on load & use.</span></div></div>
-                        <div class="flex items-start gap-3 p-3 bg-steel-50 rounded-xl"><i class="fas fa-robot text-steel-800 mt-1"></i><div><p class="text-sm font-medium">"I need 2 tonnes of hollow sections."</p><span class="text-xs text-gray-400">AI will prepare a quote request.</span></div></div>
-                    </div>
-                    <div class="mt-6 flex gap-3">
-                        <button class="btn-primary text-sm">Open AI Chat</button>
-                        <button class="btn-outline text-sm">Generate Quote with AI</button>
-                    </div>
-                </div>
-                <div class="flex-1 bg-steel-900/5 p-6 rounded-2xl border border-steel-200/50">
-                    <div class="flex items-center gap-3"><i class="fas fa-comment-dots text-amber-500"></i><span class="font-semibold text-steel-800">AI Assistant</span><span class="badge-chip">active</span></div>
-                    <div class="mt-3 p-4 bg-white rounded-xl shadow-inner text-sm text-gray-600">
-                        <p><span class="font-bold text-steel-800">You:</span> I need steel for a warehouse project in Kigali.</p>
-                        <p class="mt-2"><span class="font-bold text-amber-700">AI:</span> Recommended products: Hollow Sections, Angles, Deformed Bars. Please confirm dimensions, quantity and delivery location.</p>
-                    </div>
-                    <div class="mt-3 flex gap-2">
-                        <input type="text" placeholder="Ask about steel products..." class="flex-1 border border-gray-300 rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-steel-800/20" />
-                        <button class="bg-steel-900 text-white px-4 py-2 rounded-full text-sm hover:bg-steel-700">Send</button>
-                    </div>
-                </div>
-            </div>
+<!-- ===== INDUSTRIES ===== -->
+<section class="py-20 bg-white" id="industries">
+    <div class="container">
+        <div class="section-title">
+            <span class="overline">Industries</span>
+            <h2>Built for Every Project</h2>
         </div>
-    </section>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.5rem;">
+            {['Construction','Infrastructure','Engineering','Manufacturing','Commercial Buildings','Residential Construction'].map(i => `
+                <div style="background:var(--steel-100);padding:1.5rem;border-radius:16px;text-align:center;font-weight:600;color:var(--steel-800);border:1px solid rgba(0,0,0,0.03);">
+                    <i class="fas fa-building" style="font-size:2rem;color:var(--gold);display:block;margin-bottom:0.5rem;"></i>
+                    ${i}
+                </div>
+            `).join('')}
+        </div>
+    </div>
+</section>
 
-    <!-- ====== REQUEST QUOTE ====== -->
-    <section id="quote" class="py-20 bg-steel-50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <span class="text-sm font-semibold text-amber-600 uppercase tracking-wider">Get a Quote</span>
-                <h2 class="text-3xl md:text-4xl font-bold mt-2 text-steel-800">Request a Quote</h2>
-                <p class="mt-2 text-gray-500">Fill in the details and we'll get back to you within 24 hours.</p>
+<!-- ===== GALLERY ===== -->
+<section class="py-20 bg-steel-light" id="gallery">
+    <div class="container">
+        <div class="section-title">
+            <span class="overline">Gallery</span>
+            <h2>Projects &amp; Applications</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.2rem;" id="galleryGrid">
+            {['https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=400&h=300&fit=crop','https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=400&h=300&fit=crop','https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=400&h=300&fit=crop','https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=400&h=300&fit=crop','https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=400&h=300&fit=crop','https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=400&h=300&fit=crop'].map((url,i) => `
+                <div style="border-radius:16px;overflow:hidden;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.05);" onclick="openLightbox('${url}')">
+                    <img src="${url}" alt="Gallery ${i+1}" loading="lazy" style="width:100%;height:200px;object-fit:cover;transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'" />
+                </div>
+            `).join('')}
+        </div>
+    </div>
+</section>
+
+<!-- ===== QUOTE BUILDER ===== -->
+<section class="py-20 bg-white" id="quote">
+    <div class="container">
+        <div class="section-title">
+            <span class="overline">Request a Quote</span>
+            <h2>Build Your Steel Request</h2>
+            <p>Select products, add quantities, and submit your inquiry.</p>
+        </div>
+        <div class="quote-builder">
+            <div style="display:grid;grid-template-columns:2fr 1fr 1fr auto;gap:1rem;align-items:end;">
+                <div><label style="font-weight:600;font-size:0.9rem;">Product</label><select id="quoteProduct" class="form-control" style="width:100%;padding:0.6rem 1rem;border:1px solid #dce4e8;border-radius:12px;"></select></div>
+                <div><label style="font-weight:600;font-size:0.9rem;">Specification</label><input type="text" id="quoteSpec" placeholder="e.g. Ø16" style="width:100%;padding:0.6rem 1rem;border:1px solid #dce4e8;border-radius:12px;" /></div>
+                <div><label style="font-weight:600;font-size:0.9rem;">Qty (kg)</label><input type="number" id="quoteQty" placeholder="0" style="width:100%;padding:0.6rem 1rem;border:1px solid #dce4e8;border-radius:12px;" /></div>
+                <div><button class="btn-primary" onclick="addQuoteItem()" style="padding:0.6rem 1.5rem;">Add</button></div>
             </div>
-            <div class="mt-10 bg-white p-8 rounded-2xl shadow-premium">
-                <form class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                    <div><label class="block text-sm font-medium text-steel-800">Company Name</label><input type="text" class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2.5" placeholder="Your company" /></div>
-                    <div><label class="block text-sm font-medium text-steel-800">Contact Person</label><input type="text" class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2.5" placeholder="Full name" /></div>
-                    <div><label class="block text-sm font-medium text-steel-800">Email</label><input type="email" class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2.5" placeholder="info@company.com" /></div>
-                    <div><label class="block text-sm font-medium text-steel-800">Phone</label><input type="text" class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2.5" placeholder="+250 788 301 351" /></div>
-                    <div class="md:col-span-2"><label class="block text-sm font-medium text-steel-800">Delivery Location</label><input type="text" class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2.5" placeholder="Kigali, Rwanda" /></div>
-                    <div class="md:col-span-2"><label class="block text-sm font-medium text-steel-800">Project Information / Notes</label><textarea rows="3" class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2.5" placeholder="Tell us about your project..."></textarea></div>
-                    <div class="md:col-span-2">
-                        <button type="submit" class="w-full btn-primary py-3 text-lg">Submit Quote Request <i class="fas fa-arrow-right ml-2"></i></button>
-                        <p class="text-center text-xs text-gray-400 mt-2">An Eastern Hope representative will review your request.</p>
-                    </div>
+            <div class="items" id="quoteItems"></div>
+            <div style="margin-top:1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
+                <div><label style="font-weight:600;font-size:0.9rem;">Full Name</label><input type="text" id="qName" placeholder="Your name" style="width:100%;padding:0.6rem 1rem;border:1px solid #dce4e8;border-radius:12px;" /></div>
+                <div><label style="font-weight:600;font-size:0.9rem;">Company</label><input type="text" id="qCompany" placeholder="Company name" style="width:100%;padding:0.6rem 1rem;border:1px solid #dce4e8;border-radius:12px;" /></div>
+                <div><label style="font-weight:600;font-size:0.9rem;">Email</label><input type="email" id="qEmail" placeholder="info@company.com" style="width:100%;padding:0.6rem 1rem;border:1px solid #dce4e8;border-radius:12px;" /></div>
+                <div><label style="font-weight:600;font-size:0.9rem;">Phone</label><input type="text" id="qPhone" placeholder="+250 788 301 351" style="width:100%;padding:0.6rem 1rem;border:1px solid #dce4e8;border-radius:12px;" /></div>
+                <div style="grid-column:1/-1;"><label style="font-weight:600;font-size:0.9rem;">Delivery Location / Project Details</label><textarea id="qDetails" rows="2" placeholder="Kigali, Rwanda – building project..." style="width:100%;padding:0.6rem 1rem;border:1px solid #dce4e8;border-radius:12px;"></textarea></div>
+            </div>
+            <button class="btn-gold" onclick="submitQuote()" style="margin-top:1.5rem;width:100%;padding:0.9rem;">Submit Quote Request <i class="fas fa-arrow-right"></i></button>
+            <p style="text-align:center;font-size:0.8rem;color:#8a9ea8;margin-top:0.5rem;">An Eastern Hope representative will respond within 24 hours.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="py-20 bg-steel-light" id="contact">
+    <div class="container">
+        <div class="section-title">
+            <span class="overline">Contact</span>
+            <h2>Get in Touch</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+            <div style="background:white;border-radius:20px;padding:2rem;box-shadow:0 4px 20px rgba(0,0,0,0.04);">
+                <h4 style="font-weight:700;color:var(--steel-800);">Contact Information</h4>
+                <div style="margin-top:1.5rem;display:grid;gap:1rem;">
+                    <p><i class="fas fa-map-marker-alt" style="color:var(--gold);width:24px;"></i> Next to Hashi Energy, Kinamba – KN 8 Ave, Kigali</p>
+                    <p><i class="fas fa-phone" style="color:var(--gold);width:24px;"></i> <a href="tel:+250788301351">+250 788 301 351</a> / <a href="tel:+250788302711">+250 788 302 711</a></p>
+                    <p><i class="fas fa-envelope" style="color:var(--gold);width:24px;"></i> <a href="mailto:info@easternhopeltd.com">info@easternhopeltd.com</a></p>
+                    <p><i class="fas fa-clock" style="color:var(--gold);width:24px;"></i> Mon – Fri: 8:00 AM – 5:00 PM</p>
+                </div>
+                <a href="https://wa.me/250788301351" target="_blank" class="btn-gold" style="margin-top:1.5rem;display:inline-flex;align-items:center;gap:0.5rem;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+            <div style="background:white;border-radius:20px;padding:2rem;box-shadow:0 4px 20px rgba(0,0,0,0.04);">
+                <h4 style="font-weight:700;color:var(--steel-800);">Send a Message</h4>
+                <form onsubmit="event.preventDefault();alert('Thank you! Your message has been sent.')" style="margin-top:1rem;display:grid;gap:1rem;">
+                    <input type="text" placeholder="Your Name" required style="padding:0.6rem 1rem;border:1px solid #dce4e8;border-radius:12px;" />
+                    <input type="email" placeholder="Email" required style="padding:0.6rem 1rem;border:1px solid #dce4e8;border-radius:12px;" />
+                    <textarea rows="3" placeholder="Message" required style="padding:0.6rem 1rem;border:1px solid #dce4e8;border-radius:12px;"></textarea>
+                    <button class="btn-primary" type="submit">Send Message</button>
                 </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ====== SOLUTIONS / MORE THAN A WEBSITE ====== -->
-    <section id="solutions" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto">
-                <span class="text-sm font-semibold text-amber-600 uppercase tracking-wider">Digital Business Platform</span>
-                <h2 class="text-3xl md:text-4xl font-bold mt-2 text-steel-800">More Than a Website</h2>
-                <p class="mt-3 text-gray-500">A complete business-management platform for Eastern Hope.</p>
-            </div>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-                {['Customer Portal','AI Sales Assistant','Digital Quote Requests','Inventory Management','Business Dashboard','Customer Management'].map((item, i) => (
-                    <div key={i} class="bg-steel-50 p-6 rounded-2xl border border-steel-200/40 hover:shadow-premium transition">
-                        <div class="w-12 h-12 bg-steel-900/10 rounded-xl flex items-center justify-center"><i class="fas fa-cog text-steel-800 text-xl"></i></div>
-                        <h4 class="font-bold text-steel-800 mt-4">{item}</h4>
-                        <p class="text-sm text-gray-500 mt-1">Enterprise capability ready for integration.</p>
-                    </div>
-                ))}
-            </div>
+<!-- ===== FOOTER ===== -->
+<footer>
+    <div class="container">
+        <div class="grid">
+            <div><h4>Eastern Hope Ltd</h4><p style="color:rgba(255,255,255,0.5);font-size:0.9rem;">Quality steel, reliable supply, professional service. Importers and distributors of steel products in Rwanda.</p></div>
+            <div><h4>Products</h4><ul><li><a href="#products">Deformed Bars</a></li><li><a href="#products">Angles</a></li><li><a href="#products">Hollow Sections</a></li><li><a href="#products">Door Frames</a></li></ul></div>
+            <div><h4>Company</h4><ul><li><a href="#about">About</a></li><li><a href="#industries">Industries</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#contact">Contact</a></li></ul></div>
+            <div><h4>Contact</h4><ul><li><a href="tel:+250788301351">+250 788 301 351</a></li><li><a href="mailto:info@easternhopeltd.com">info@easternhopeltd.com</a></li><li>Kinamba – KN 8 Ave, Kigali</li></ul></div>
         </div>
-    </section>
-
-    <!-- ====== CONTACT ====== -->
-    <section id="contact" class="py-20 bg-steel-50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <span class="text-sm font-semibold text-amber-600 uppercase tracking-wider">Contact</span>
-                <h2 class="text-3xl md:text-4xl font-bold mt-2 text-steel-800">Get in Touch</h2>
-            </div>
-            <div class="mt-10 grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded-2xl shadow-card">
-                    <h4 class="font-bold text-steel-800">Contact Information</h4>
-                    <div class="mt-4 space-y-3 text-sm">
-                        <p><i class="fas fa-map-marker-alt w-5 text-amber-600"></i> Next to Hashi Energy, Kinamba - KN 8 Ave, Kigali</p>
-                        <p><i class="fas fa-phone w-5 text-amber-600"></i> <a href="tel:+250788301351" class="text-steel-800 hover:underline">+250 788 301 351</a></p>
-                        <p><i class="fas fa-envelope w-5 text-amber-600"></i> <a href="mailto:info@easternhopeltd.com" class="text-steel-800 hover:underline">info@easternhopeltd.com</a></p>
-                        <p><i class="fas fa-clock w-5 text-amber-600"></i> Mon – Fri: 8:00 AM – 5:00 PM</p>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-card">
-                    <h4 class="font-bold text-steel-800">Send a Message</h4>
-                    <form class="mt-4 space-y-3">
-                        <input type="text" placeholder="Your Name" class="w-full border border-gray-300 rounded-xl px-4 py-2.5 text-sm" />
-                        <input type="email" placeholder="Email" class="w-full border border-gray-300 rounded-xl px-4 py-2.5 text-sm" />
-                        <textarea rows="3" placeholder="Message" class="w-full border border-gray-300 rounded-xl px-4 py-2.5 text-sm"></textarea>
-                        <button class="btn-primary w-full text-sm">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
-
-<!-- ====== FOOTER ====== -->
-<footer class="bg-steel-900 text-white/90">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div><h4 class="font-bold text-white">Eastern Hope Ltd</h4><p class="text-sm mt-2 text-white/60">Quality steel, reliable supply, professional service.</p></div>
-            <div><h5 class="font-semibold text-white">Products</h5><ul class="mt-2 space-y-1 text-sm text-white/60"><li>Deformed Bars</li><li>Angles</li><li>Hollow Sections</li><li>Door Frames</li></ul></div>
-            <div><h5 class="font-semibold text-white">Company</h5><ul class="mt-2 space-y-1 text-sm text-white/60"><li><a href="#about">About</a></li><li><a href="#products">Products</a></li><li><a href="#quote">Request Quote</a></li><li><a href="#contact">Contact</a></li></ul></div>
-            <div><h5 class="font-semibold text-white">Contact</h5><p class="text-sm mt-2 text-white/60"><i class="fas fa-map-marker-alt mr-2"></i>Kinamba - KN 8 Ave, Kigali</p><p class="text-sm text-white/60"><i class="fas fa-phone mr-2"></i>+250 788 301 351</p><p class="text-sm text-white/60"><i class="fas fa-envelope mr-2"></i>info@easternhopeltd.com</p></div>
-        </div>
-        <div class="border-t border-white/10 mt-10 pt-6 text-sm text-white/40 flex flex-col sm:flex-row justify-between items-center gap-2">
+        <div class="bottom">
             <span>&copy; 2026 Eastern Hope Ltd. All rights reserved.</span>
-            <span>Powered by <a href="https://neroxiafrica.com" target="_blank" class="powered-link">NEROXIAFRICA</a></span>
+            <span>Powered by <a href="https://neroxiafrica.com/" target="_blank" rel="noopener noreferrer" style="font-weight:500;">NeroXiafrica</a></span>
         </div>
     </div>
 </footer>
 
-<!-- ====== WHATSAPP FLOAT ====== -->
-<a href="https://wa.me/250788301351" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-3.5 rounded-full shadow-lg hover:scale-105 transition text-2xl z-50"><i class="fab fa-whatsapp"></i></a>
+<!-- ===== WHATSAPP FLOAT ===== -->
+<a href="https://wa.me/250788301351" target="_blank" rel="noopener noreferrer" style="position:fixed;bottom:24px;right:24px;background:#25D366;color:white;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 6px 20px rgba(37,211,102,0.3);z-index:80;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"><i class="fab fa-whatsapp"></i></a>
 
-<!-- ====== MOBILE MENU SCRIPT ====== -->
+<!-- ===== BACK TO TOP ===== -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></button>
+
+<!-- ===== AI CHAT ===== -->
+<div class="ai-float">
+    <button class="ai-toggle" onclick="toggleAI()"><i class="fas fa-robot"></i></button>
+</div>
+<div class="ai-window" id="aiWindow">
+    <div class="ai-header"><h4><i class="fas fa-robot" style="margin-right:8px;"></i> Eastern Hope AI</h4><button class="close-ai" onclick="toggleAI()">✕</button></div>
+    <div class="ai-messages" id="aiMessages">
+        <div class="ai-msg bot"><div class="bubble">Hello! I'm Eastern Hope's AI assistant. Ask me about steel products, specifications, or help with a quote request.</div></div>
+    </div>
+    <div class="ai-input">
+        <input type="text" id="aiInput" placeholder="Ask about steel..." onkeydown="if(event.key==='Enter') sendAI()" />
+        <button onclick="sendAI()">Send</button>
+    </div>
+</div>
+
+<!-- ===== LIGHTBOX ===== -->
+<div class="modal-overlay" id="lightbox" onclick="if(event.target===this) closeLightbox()">
+    <div class="modal" style="max-width:800px;padding:0.5rem;background:transparent;box-shadow:none;">
+        <img id="lightboxImg" src="" alt="Lightbox" style="border-radius:16px;max-height:80vh;width:100%;object-fit:contain;" />
+        <button onclick="closeLightbox()" style="position:absolute;top:1rem;right:1.5rem;background:rgba(0,0,0,0.5);color:white;border:none;border-radius:50%;width:40px;height:40px;font-size:1.4rem;cursor:pointer;">✕</button>
+    </div>
+</div>
+
+<!-- ===== MODAL (Product Detail) ===== -->
+<div class="modal-overlay" id="productModal" onclick="if(event.target===this) closeModal()">
+    <div class="modal" id="modalContent"></div>
+</div>
+
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const btn = document.getElementById('mobileMenuBtn');
-        const menu = document.getElementById('mobileMenu');
-        if (btn && menu) {
-            btn.addEventListener('click', function() { menu.classList.toggle('hidden'); });
-        }
-        document.querySelectorAll('#mobileMenu a').forEach(link => {
-            link.addEventListener('click', function() { menu.classList.add('hidden'); });
-        });
-        // smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-            });
-        });
+// ============================================================
+// DATA
+// ============================================================
+const products = [
+    { id:1, name:'Deformed Bars', desc:'High-strength reinforcement bars for concrete structures.', spec:'Ø5 – Ø40', category:'Reinforcement', img:'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=600&h=400&fit=crop' },
+    { id:2, name:'Angles', desc:'L-shaped structural steel for frames and supports.', spec:'20×20 – 100×100', category:'Structural', img:'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=600&h=400&fit=crop' },
+    { id:3, name:'Tee Angles', desc:'T-shaped sections for heavy-duty framing.', spec:'T20 – T100', category:'Structural', img:'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=600&h=400&fit=crop' },
+    { id:4, name:'Hollow Sections', desc:'Square & rectangular tubes for columns and beams.', spec:'80/40 – 16/16', category:'Structural', img:'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=600&h=400&fit=crop' },
+    { id:5, name:'Door Frames', desc:'Precision steel door frames for commercial buildings.', spec:'Standard & custom', category:'Fabricated', img:'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=600&h=400&fit=crop' },
+    { id:6, name:'Bottle Profiles', desc:'Specialized profiles for glazing and cladding.', spec:'12×12 – 30×30', category:'Profiles', img:'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=600&h=400&fit=crop' },
+    { id:7, name:'Flat Bars', desc:'Flat steel bars for fabrication and repairs.', spec:'20×3 – 100×10', category:'Flat', img:'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=600&h=400&fit=crop' },
+    { id:8, name:'Omega Profiles', desc:'Versatile profiles for roofing and siding.', spec:'20 – 40 mm', category:'Profiles', img:'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=600&h=400&fit=crop' },
+    { id:9, name:'Triplex / Sheets', desc:'High-grade steel sheets for structural and roofing applications.', spec:'Various grades', category:'Sheets', img:'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=600&h=400&fit=crop' }
+];
+
+// ============================================================
+// RENDER PRODUCTS
+// ============================================================
+function renderProducts() {
+    const grid = document.getElementById('productGrid');
+    grid.innerHTML = products.map(p => `
+        <div class="product-card">
+            <div class="img-wrap"><img src="${p.img}" alt="${p.name}" loading="lazy" /></div>
+            <div class="body">
+                <h3>${p.name}</h3>
+                <p>${p.desc}</p>
+                <span class="spec">${p.spec}</span>
+                <div class="actions">
+                    <a href="#" onclick="openProduct(${p.id});return false;" style="color:var(--gold);">View Details →</a>
+                    <a href="#quote" class="btn-primary" style="padding:0.3rem 1.2rem;font-size:0.8rem;">Quote</a>
+                </div>
+            </div>
+        </div>
+    `).join('');
+    // populate quote dropdown
+    const sel = document.getElementById('quoteProduct');
+    sel.innerHTML = products.map(p => `<option value="${p.id}">${p.name}</option>`).join('');
+}
+renderProducts();
+
+// ============================================================
+// PRODUCT MODAL
+// ============================================================
+function openProduct(id) {
+    const p = products.find(x => x.id === id);
+    if (!p) return;
+    const modal = document.getElementById('productModal');
+    const content = document.getElementById('modalContent');
+    content.innerHTML = `
+        <span class="modal-close" onclick="closeModal()">✕</span>
+        <img src="${p.img}" alt="${p.name}" />
+        <h2>${p.name}</h2>
+        <div class="specs"><span>${p.spec}</span><span>${p.category}</span></div>
+        <p>${p.desc}</p>
+        <div style="margin-top:1.5rem;">
+            <h4 style="font-weight:600;">Request a Quote</h4>
+            <div class="form-row">
+                <div class="form-group"><label>Quantity (kg)</label><input type="number" id="modalQty" placeholder="0" /></div>
+                <div class="form-group"><label>Specification</label><input type="text" id="modalSpec" placeholder="${p.spec}" /></div>
+            </div>
+            <div class="form-group"><label>Notes</label><textarea id="modalNotes" rows="2" placeholder="Project details..."></textarea></div>
+            <button class="btn-gold" onclick="addModalToQuote(${p.id})" style="margin-top:0.5rem;">Add to Quote</button>
+        </div>
+    `;
+    modal.classList.add('open');
+}
+function closeModal() { document.getElementById('productModal').classList.remove('open'); }
+function addModalToQuote(id) {
+    const p = products.find(x => x.id === id);
+    const qty = document.getElementById('modalQty').value || '100';
+    const spec = document.getElementById('modalSpec').value || p.spec;
+    addQuoteItemManually(p.name, spec, qty);
+    closeModal();
+    document.getElementById('quote').scrollIntoView({behavior:'smooth'});
+}
+
+// ============================================================
+// QUOTE BUILDER
+// ============================================================
+let quoteItems = [];
+function addQuoteItem() {
+    const sel = document.getElementById('quoteProduct');
+    const id = parseInt(sel.value);
+    const p = products.find(x => x.id === id);
+    const spec = document.getElementById('quoteSpec').value || p.spec;
+    const qty = document.getElementById('quoteQty').value || '100';
+    addQuoteItemManually(p.name, spec, qty);
+}
+function addQuoteItemManually(name, spec, qty) {
+    quoteItems.push({ name, spec, qty });
+    renderQuoteItems();
+}
+function renderQuoteItems() {
+    const container = document.getElementById('quoteItems');
+    if (quoteItems.length === 0) { container.innerHTML = '<p style="color:#8a9ea8;font-size:0.9rem;">No items added yet.</p>'; return; }
+    container.innerHTML = quoteItems.map((item, i) => `
+        <div class="quote-item">
+            <span><strong>${item.name}</strong> — ${item.spec} — ${item.qty} kg</span>
+            <span class="remove" onclick="removeQuoteItem(${i})">Remove</span>
+        </div>
+    `).join('');
+}
+function removeQuoteItem(i) { quoteItems.splice(i,1); renderQuoteItems(); }
+
+function submitQuote() {
+    const name = document.getElementById('qName').value.trim();
+    const company = document.getElementById('qCompany').value.trim();
+    const email = document.getElementById('qEmail').value.trim();
+    const phone = document.getElementById('qPhone').value.trim();
+    const details = document.getElementById('qDetails').value.trim();
+    if (!name || !email) { alert('Please fill in your name and email.'); return; }
+    if (quoteItems.length === 0) { alert('Please add at least one product to your quote.'); return; }
+    const items = quoteItems.map(i => `${i.name} (${i.spec}) – ${i.qty} kg`).join('\n');
+    const msg = `Quote Request from ${name} (${company})\nEmail: ${email}\nPhone: ${phone}\nDelivery: ${details}\n\nProducts:\n${items}`;
+    // configurable endpoint – replace with your backend
+    // For now, open mailto
+    window.location.href = `mailto:info@easternhopeltd.com?subject=Quote Request from ${encodeURIComponent(name)}&body=${encodeURIComponent(msg)}`;
+    alert('Your quote request has been prepared. We will contact you shortly.');
+    // reset
+    quoteItems = [];
+    renderQuoteItems();
+    document.getElementById('qName').value = '';
+    document.getElementById('qCompany').value = '';
+    document.getElementById('qEmail').value = '';
+    document.getElementById('qPhone').value = '';
+    document.getElementById('qDetails').value = '';
+}
+
+// ============================================================
+// AI ASSISTANT (local)
+// ============================================================
+function toggleAI() {
+    const w = document.getElementById('aiWindow');
+    w.classList.toggle('open');
+}
+function openAI() { document.getElementById('aiWindow').classList.add('open'); }
+
+function sendAI() {
+    const input = document.getElementById('aiInput');
+    const msg = input.value.trim();
+    if (!msg) return;
+    const container = document.getElementById('aiMessages');
+    // user message
+    container.innerHTML += `<div class="ai-msg user"><div class="bubble">${msg}</div></div>`;
+    input.value = '';
+    container.scrollTop = container.scrollHeight;
+    // bot response (local AI)
+    setTimeout(() => {
+        const response = getAIResponse(msg);
+        container.innerHTML += `<div class="ai-msg bot"><div class="bubble">${response}</div></div>`;
+        container.scrollTop = container.scrollHeight;
+    }, 400);
+}
+
+function getAIResponse(text) {
+    const lower = text.toLowerCase();
+    if (lower.includes('deformed') || lower.includes('rebar') || lower.includes('bar')) {
+        return 'Deformed Bars (Ø5–Ø40) are ideal for concrete reinforcement. Would you like a quote? Please specify quantity and diameter.';
+    }
+    if (lower.includes('hollow') || lower.includes('tube') || lower.includes('section')) {
+        return 'Hollow Sections are available in square and rectangular profiles (80/40 – 16/16). What dimensions and thickness do you need?';
+    }
+    if (lower.includes('angle') || lower.includes('l-shape')) {
+        return 'Angles and Tee Angles are available in various sizes. Let me know the dimensions and quantity for a quote.';
+    }
+    if (lower.includes('door') || lower.includes('frame')) {
+        return 'We supply standard and custom steel door frames. Do you have specific dimensions or quantity in mind?';
+    }
+    if (lower.includes('sheet') || lower.includes('triplex') || lower.includes('roof')) {
+        return 'Triplex / steel sheets are available in various grades. Tell me the application and quantity.';
+    }
+    if (lower.includes('warehouse') || lower.includes('building') || lower.includes('construction')) {
+        return 'For warehouses and buildings, we recommend Hollow Sections, Angles, and Deformed Bars. Would you like to discuss your project in more detail?';
+    }
+    if (lower.includes('quote') || lower.includes('price') || lower.includes('cost')) {
+        return 'I can help you prepare a quote. Please tell me the products, specifications, and quantities you need.';
+    }
+    return 'I can help you with steel products. Please tell me what you need (e.g., deformed bars, hollow sections, angles) and I will assist with specifications and quotes.';
+}
+
+// ============================================================
+// LIGHTBOX
+// ============================================================
+function openLightbox(url) {
+    document.getElementById('lightboxImg').src = url;
+    document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+}
+
+// ============================================================
+// NAV, SCROLL, BACK TO TOP
+// ============================================================
+document.getElementById('hamburger').addEventListener('click', function() {
+    document.getElementById('navLinks').classList.toggle('open');
+});
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('open');
+        document.querySelectorAll('.nav-links a').forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
     });
+});
+window.addEventListener('scroll', function() {
+    const btn = document.getElementById('backTop');
+    if (window.scrollY > 400) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+});
+// close modals on ESC
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { closeModal(); closeLightbox(); }
+});
+
+// ============================================================
+// CONFIGURABLE: AI API / BACKEND ENDPOINT
+// ============================================================
+// To connect a real AI API, replace getAIResponse() with an async fetch call
+// and use a secure backend proxy. Do NOT expose keys in frontend.
+// Example:
+// async function getAIResponse(text) {
+//   const res = await fetch('/api/ai', { method:'POST', body:JSON.stringify({message:text}) });
+//   return (await res.json()).reply;
+// }
 </script>
 </body>
 </html>
