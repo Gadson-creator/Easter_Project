@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eastern Hope Ltd | Quality Steel Products</title>
+    <!-- Font & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+    <!-- Tailwind via CDN (for quick dev) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* custom overrides & utilities */
+        body { font-family: 'Inter', sans-serif; background: #fafcfb; }
+        .bg-steel-50 { background-color: #f2f5f7; }
+        .bg-steel-900 { background-color: #0b1a1e; }
+        .text-steel-800 { color: #1c2c34; }
+        .border-steel-200 { border-color: #d4dfe3; }
+        .shadow-premium { box-shadow: 0 20px 40px -12px rgba(0,20,30,0.15); }
+        .shadow-card { box-shadow: 0 8px 24px -6px rgba(0,20,30,0.08); }
+        .hover-lift { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .hover-lift:hover { transform: translateY(-4px); box-shadow: 0 20px 32px -12px rgba(0,20,30,0.18); }
+        .product-image { background: #eef2f4; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #3d5a63; }
+        .gradient-text { background: linear-gradient(135deg, #0b1a1e 0%, #2c4a54 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glass-panel { background: rgba(255,255,255,0.7); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.3); }
+        .nav-link { font-weight: 500; color: #1c2c34; padding: 0.5rem 0.75rem; border-radius: 0.5rem; transition: all 0.15s; }
+        .nav-link:hover { background: rgba(11,26,30,0.05); color: #0b1a1e; }
+        .nav-link.active { background: #0b1a1e; color: white; }
+        .btn-primary { background: #0b1a1e; color: white; padding: 0.6rem 1.5rem; border-radius: 9999px; font-weight: 600; transition: all 0.2s; }
+        .btn-primary:hover { background: #1a343a; transform: scale(1.02); }
+        .btn-outline { border: 1px solid #0b1a1e; color: #0b1a1e; padding: 0.6rem 1.5rem; border-radius: 9999px; font-weight: 600; transition: all 0.2s; }
+        .btn-outline:hover { background: #0b1a1e; color: white; }
+        .badge-chip { background: #e5edf0; color: #1c3b44; padding: 0.2rem 0.8rem; border-radius: 999px; font-size: 0.75rem; font-weight: 600; }
+        /* scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #eef2f4; }
+        ::-webkit-scrollbar-thumb { background: #6b8a94; border-radius: 12px; }
+    </style>
+</head>
+<body>
+
+<!-- ====== STICKY NAV ====== -->
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <!-- Logo -->
+            <div class="flex items-center gap-2">
+                <div class="w-9 h-9 bg-steel-900 rounded-lg flex items-center justify-center text-white font-bold text-sm">EH</div>
+                <span class="font-bold text-xl text-steel-800 tracking-tight">Eastern Hope</span>
+            </div>
+            <!-- Desktop nav -->
+            <nav class="hidden md:flex items-center gap-1 text-sm">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#solutions" class="nav-link">Solutions</a>
+                <a href="#ai" class="nav-link">AI Assistant</a>
+                <a href="#quote" class="nav-link">Request Quote</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="flex items-center gap-3">
+                <a href="#quote" class="hidden md:inline-block btn-primary text-sm">Request Quote</a>
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100">
+                    <i class="fas fa-bars text-xl text-steel-800"></i>
+                </button>
+            </div>
+        </div>
+        <!-- mobile menu (hidden) -->
+        <div id="mobileMenu" class="md:hidden hidden pb-4 border-t border-gray-200/60">
+            <div class="flex flex-col space-y-2 pt-3 text-sm">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#solutions" class="nav-link">Solutions</a>
+                <a href="#ai" class="nav-link">AI Assistant</a>
+                <a href="#quote" class="nav-link">Request Quote</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#quote" class="btn-primary text-center mt-2">Request Quote</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- ====== HERO ====== -->
+    <section class="relative bg-steel-50 overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: url('https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=1400&q=80'); background-size: cover; background-position: center;"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-steel-800">
+                        STRONGER MATERIALS. <br class="hidden sm:block" />
+                        <span class="gradient-text">STRONGER FUTURES.</span>
+                    </h1>
+                    <p class="mt-4 text-lg text-gray-600 max-w-lg">Reliable steel solutions for construction, manufacturing and infrastructure.</p>
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <a href="#quote" class="btn-primary">Request a Quote</a>
+                        <a href="#products" class="btn-outline">Explore Products</a>
+                        <a href="#contact" class="text-steel-800 underline underline-offset-4 font-medium">Talk to Eastern Hope</a>
+                    </div>
+                </div>
+                <!-- floating card -->
+                <div class="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-premium border border-white/50 max-w-sm ml-auto">
+                    <div class="flex items-center gap-2 text-sm font-semibold text-steel-800"><i class="fas fa-cube text-amber-600"></i> Need steel for your next project?</div>
+                    <div class="mt-3 space-y-2">
+                        <div class="flex justify-between"><span class="text-gray-500">Product</span><span class="font-medium">Deformed Bars</span></div>
+                        <div class="flex justify-between"><span class="text-gray-500">Quantity</span><span class="font-medium">5,000 KG</span></div>
+                    </div>
+                    <a href="#quote" class="mt-4 block w-full text-center bg-amber-600 hover:bg-amber-700 text-white font-semibold py-2.5 rounded-xl transition">Request Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== TRUST / INTRO ====== -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-sm font-semibold text-amber-600 uppercase tracking-wider">About Eastern Hope</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2 text-steel-800">Quality steel. Reliable supply. Professional service.</h2>
+                    <p class="mt-4 text-gray-600 leading-relaxed">Eastern Hope Ltd is a leading importer and distributor of steel products in Rwanda. We source premium steel construction materials from regional and international suppliers, wholesaling to retailers and construction companies at competitive prices.</p>
+                    <p class="mt-3 text-gray-600 leading-relaxed">Beyond steel, we’ve expanded into essential commodities like rice and sugar, serving the wider East African market with the same dedication to excellence.</p>
+                    <div class="mt-6 grid grid-cols-2 gap-4">
+                        <div><span class="block font-bold text-steel-800">Quality Focus</span><span class="text-sm text-gray-500">ISO-compliant materials</span></div>
+                        <div><span class="block font-bold text-steel-800">Reliable Supply</span><span class="text-sm text-gray-500">Regional & global sourcing</span></div>
+                        <div><span class="block font-bold text-steel-800">Customer Service</span><span class="text-sm text-gray-500">Dedicated support</span></div>
+                        <div><span class="block font-bold text-steel-800">Steel Distribution</span><span class="text-sm text-gray-500">Wholesale & retail</span></div>
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-premium">
+                    <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=800&h=600&fit=crop" alt="Steel warehouse" class="w-full h-72 object-cover" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== PRODUCT SHOWCASE ====== -->
+    <section id="products" class="py-20 bg-steel-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto">
+                <span class="text-sm font-semibold text-amber-600 uppercase tracking-wider">Our Range</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 text-steel-800">Premium Steel Products</h2>
+                <p class="mt-3 text-gray-500">Engineered for strength, durability and performance.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+                <!-- product cards (9 products) -->
+                {[
+                  { name: 'Deformed Bars', desc: 'High-strength reinforcement bars for concrete structures.', spec: 'Ø5 – Ø40', icon: 'fa-bars' },
+                  { name: 'Angles', desc: 'L-shaped structural steel for frames and supports.', spec: '20×20 – 100×100', icon: 'fa-angles-left' },
+                  { name: 'Tee Angles', desc: 'T-shaped sections for heavy-duty framing.', spec: 'T20 – T100', icon: 'fa-shapes' },
+                  { name: 'Hollow Sections', desc: 'Square & rectangular tubes for columns and beams.', spec: '80/40 – 16/16', icon: 'fa-vector-square' },
+                  { name: 'Door Frames', desc: 'Precision steel door frames for commercial buildings.', spec: 'Standard & custom', icon: 'fa-door-open' },
+                  { name: 'Bottle Profiles', desc: 'Specialized profiles for glazing and cladding.', spec: '12×12 – 30×30', icon: 'fa-flask' },
+                  { name: 'Flats', desc: 'Flat steel bars for fabrication and repairs.', spec: '20×3 – 100×10', icon: 'fa-grip-lines' },
+                  { name: 'Omega Profiles', desc: 'Versatile profiles for roofing and siding.', spec: '20 – 40 mm', icon: 'fa-omega' },
+                  { name: 'Triplex', desc: 'High-grade steel for structural applications.', spec: 'Various grades', icon: 'fa-layer-group' },
+                ].map((p, i) => (
+                    <div key={i} class="bg-white rounded-2xl shadow-card hover-lift overflow-hidden group">
+                        <div class="product-image h-48 relative">
+                            <i class={`fas ${p.icon} text-5xl text-steel-800/20 group-hover:scale-110 transition duration-300`}></i>
+                            <span class="absolute bottom-2 right-2 text-xs bg-white/70 px-2 py-0.5 rounded-full text-steel-800 font-medium">Steel</span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-bold text-lg text-steel-800">{p.name}</h3>
+                            <p class="text-sm text-gray-500 mt-1">{p.desc}</p>
+                            <div class="mt-2 flex flex-wrap gap-1"><span class="badge-chip">{p.spec}</span></div>
+                            <div class="mt-4 flex justify-between items-center">
+                                <a href="#" class="text-sm font-medium text-amber-700 hover:underline">View Details</a>
+                                <a href="#quote" class="text-sm font-semibold bg-steel-900 text-white px-4 py-1.5 rounded-full hover:bg-steel-700 transition">Request Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== AI ASSISTANT (DEMO) ====== -->
+    <section id="ai" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="flex-1">
+                    <span class="text-sm font-semibold text-amber-600 uppercase tracking-wider">AI-Powered</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2 text-steel-800">Eastern Hope AI Assistant</h2>
+                    <p class="mt-3 text-gray-500 max-w-lg">Get instant product recommendations, quotation help, and project advice.</p>
+                    <div class="mt-6 space-y-3">
+                        <div class="flex items-start gap-3 p-3 bg-steel-50 rounded-xl"><i class="fas fa-robot text-steel-800 mt-1"></i><div><p class="text-sm font-medium">"Which steel product is suitable for my construction project?"</p><span class="text-xs text-gray-400">AI recommends based on load & use.</span></div></div>
+                        <div class="flex items-start gap-3 p-3 bg-steel-50 rounded-xl"><i class="fas fa-robot text-steel-800 mt-1"></i><div><p class="text-sm font-medium">"I need 2 tonnes of hollow sections."</p><span class="text-xs text-gray-400">AI will prepare a quote request.</span></div></div>
+                    </div>
+                    <div class="mt-6 flex gap-3">
+                        <button class="btn-primary text-sm">Open AI Chat</button>
+                        <button class="btn-outline text-sm">Generate Quote with AI</button>
+                    </div>
+                </div>
+                <div class="flex-1 bg-steel-900/5 p-6 rounded-2xl border border-steel-200/50">
+                    <div class="flex items-center gap-3"><i class="fas fa-comment-dots text-amber-500"></i><span class="font-semibold text-steel-800">AI Demo</span><span class="badge-chip">ready</span></div>
+                    <div class="mt-3 p-4 bg-white rounded-xl shadow-inner text-sm text-gray-600">
+                        <p><span class="font-bold text-steel-800">You:</span> I need steel for a warehouse project in Kigali.</p>
+                        <p class="mt-2"><span class="font-bold text-amber-700">AI:</span> Recommended products: Hollow Sections, Angles, Deformed Bars. Please confirm dimensions, quantity and delivery location.</p>
+                    </div>
+                    <div class="mt-3 flex gap-2">
+                        <input type="text" placeholder="Ask about steel products..." class="flex-1 border border-gray-300 rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-steel-800/20" />
+                        <button class="bg-steel-900 text-white px-4 py-2 rounded-full text-sm hover:bg-steel-700">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== REQUEST QUOTE (SIMPLIFIED) ====== -->
+    <section id="quote" class="py-20 bg-steel-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <span class="text-sm font-semibold text-amber-600 uppercase tracking-wider">Get a Quote</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 text-steel-800">Request a Quote</h2>
+                <p class="mt-2 text-gray-500">Fill in the details and we'll get back to you within 24 hours.</p>
+            </div>
+            <div class="mt-10 bg-white p-8 rounded-2xl shadow-premium">
+                <form class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div><label class="block text-sm font-medium text-steel-800">Company Name</label><input type="text" class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2.5" placeholder="Your company" /></div>
+                    <div><label class="block text-sm font-medium text-steel-800">Contact Person</label><input type="text" class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2.5" placeholder="Full name" /></div>
+                    <div><label class="block text-sm font-medium text-steel-800">Email</label><input type="email" class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2.5" placeholder="info@company.com" /></div>
+                    <div><label class="block text-sm font-medium text-steel-800">Phone</label><input type="text" class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2.5" placeholder="+250 788 301 351" /></div>
+                    <div class="md:col-span-2"><label class="block text-sm font-medium text-steel-800">Delivery Location</label><input type="text" class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2.5" placeholder="Kigali, Rwanda" /></div>
+                    <div class="md:col-span-2"><label class="block text-sm font-medium text-steel-800">Project Information / Notes</label><textarea rows="3" class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2.5" placeholder="Tell us about your project..."></textarea></div>
+                    <div class="md:col-span-2">
+                        <button class="w-full btn-primary py-3 text-lg">Submit Quote Request <i class="fas fa-arrow-right ml-2"></i></button>
+                        <p class="text-center text-xs text-gray-400 mt-2">An Eastern Hope representative will review your request.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== MORE THAN A WEBSITE ====== -->
+    <section id="solutions" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="text-sm font-semibold text-amber-600 uppercase tracking-wider">Digital Transformation</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 text-steel-800">More Than a Website</h2>
+                <p class="mt-3 text-gray-500">A complete business-management demonstration platform for Eastern Hope.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+                {['Customer Portal','AI Sales Assistant','Digital Quote Requests','Inventory Management','Business Dashboard','Customer Management'].map((item, i) => (
+                    <div key={i} class="bg-steel-50 p-6 rounded-2xl border border-steel-200/40 hover:shadow-premium transition">
+                        <div class="w-12 h-12 bg-steel-900/10 rounded-xl flex items-center justify-center"><i class="fas fa-cog text-steel-800 text-xl"></i></div>
+                        <h4 class="font-bold text-steel-800 mt-4">{item}</h4>
+                        <p class="text-sm text-gray-500 mt-1">Demonstration capability ready for integration.</p>
+                    </div>
+                ))}
+            </div>
+            <div class="mt-10 text-center"><span class="inline-block bg-amber-100 text-amber-800 px-4 py-1.5 rounded-full text-sm font-medium"><i class="fas fa-play-circle mr-2"></i>Demo Mode — click to explore</span></div>
+        </div>
+    </section>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="bg-steel-900 text-white/90">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div><h4 class="font-bold text-white">Eastern Hope Ltd</h4><p class="text-sm mt-2 text-white/60">Quality steel, reliable supply, professional service.</p></div>
+            <div><h5 class="font-semibold text-white">Products</h5><ul class="mt-2 space-y-1 text-sm text-white/60"><li>Deformed Bars</li><li>Angles</li><li>Hollow Sections</li><li>Door Frames</li></ul></div>
+            <div><h5 class="font-semibold text-white">Company</h5><ul class="mt-2 space-y-1 text-sm text-white/60"><li><a href="#about">About</a></li><li><a href="#products">Products</a></li><li><a href="#quote">Request Quote</a></li><li><a href="#contact">Contact</a></li></ul></div>
+            <div><h5 class="font-semibold text-white">Contact</h5><p class="text-sm mt-2 text-white/60"><i class="fas fa-map-marker-alt mr-2"></i>Next to Hashi Energy, Kinamba - KN 8 Ave, Kigali</p><p class="text-sm text-white/60"><i class="fas fa-phone mr-2"></i>+250 788 301 351</p><p class="text-sm text-white/60"><i class="fas fa-envelope mr-2"></i>info@easternhopeltd.com</p></div>
+        </div>
+        <div class="border-t border-white/10 mt-10 pt-6 text-sm text-white/40 flex justify-between"><span>&copy; 2024 Eastern Hope Ltd. All rights reserved.</span><span>Demo prototype — for presentation</span></div>
+    </div>
+</footer>
+
+<!-- ====== WHATSAPP FLOAT ====== -->
+<a href="https://wa.me/250788301351" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-3.5 rounded-full shadow-lg hover:scale-105 transition text-2xl z-50"><i class="fab fa-whatsapp"></i></a>
+
+<!-- ====== MOBILE MENU SCRIPT ====== -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const btn = document.getElementById('mobileMenuBtn');
+        const menu = document.getElementById('mobileMenu');
+        if (btn && menu) {
+            btn.addEventListener('click', function() { menu.classList.toggle('hidden'); });
+        }
+        // close on link click (mobile)
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', function() { menu.classList.add('hidden'); });
+        });
+    });
+</script>
+<!-- simple scroll behavior -->
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        });
+    });
+</script>
+</body>
+</html>
